@@ -60,9 +60,9 @@ class Course extends Model
         $end_hour   = Carbon::parse($this->end_hour);
         $hour       = ($start_hour->diffInMinutes($end_hour)/60);
 
-        $total_days = $this->start_at->diffInDaysFiltered(function (Carbon $date) {
+        $total_days = $this->start_at->addDay(-1)->diffInDaysFiltered(function (Carbon $date) {
             return in_array($date->dayOfWeek, json_decode($this->day));
-        }, $this->end_at);
+        }, $this->end_at->addDay(1));
 
         $total_hour = $total_days * $hour;
 
@@ -71,6 +71,6 @@ class Course extends Model
 
     public function getTotalWeekAttribute()
     {
-        return $this->start_at->diffInWeeks($this->end_at);
+        return $this->start_at->addDay(-1)->diffInWeekendDays($this->end_at->addDay(1))/2;
     }
 }
