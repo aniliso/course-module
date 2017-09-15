@@ -63,6 +63,11 @@ class PublicController extends BasePublicController
             ->addAlternates($this->getAlternateLanguages('course::routes.category.slug'));
         /* End Seo */
 
-        return view('course::index', compact('courses'));
+        Breadcrumbs::register('course.category', function ($breadcrumbs) use ($category) {
+            $breadcrumbs->parent('course.index');
+            $breadcrumbs->push($category->title, route('category.slug', [$category->slug]));
+        });
+
+        return view('course::category', compact('courses', 'category'));
     }
 }

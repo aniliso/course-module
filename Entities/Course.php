@@ -71,6 +71,6 @@ class Course extends Model
 
     public function getTotalWeekAttribute()
     {
-        return $this->start_at->addDay(-1)->diffInWeekendDays($this->end_at->addDay(1))/2;
+        return floor($this->start_at->addDay(-1)->diffInWeekendDays($this->end_at->addDay(1))/2);
     }
 }

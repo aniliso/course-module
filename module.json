@@ -1,6 +1,7 @@
 {
     "name": "Course",
     "alias": "course",
+    "version": "1.0.2",
     "description": "",
     "keywords": [],
     "active": 1,
