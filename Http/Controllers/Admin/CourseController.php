@@ -110,6 +110,15 @@ class CourseController extends AdminBaseController
     {
         $this->course->update($course, $request->all());
 
+        if ($request->has('category_id') && $request->has('location_id')) {
+
+            $category = $this->category->find($request->category_id);
+            $course->category()->associate($category);
+            $location = $this->location->find($request->location_id);
+            $course->location()->associate($location);
+            $course->save();
+        }
+
         return redirect()->route('admin.course.course.index')
             ->withSuccess(trans('core::core.messages.resource updated', ['name' => trans('course::courses.title.courses')]));
     }

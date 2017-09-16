@@ -169,8 +169,8 @@
 //            d.setDate(d.getDate()+1);
             $('#end_hour').data("DateTimePicker").minDate(e.date);
         });
-        $('#end_hour, #end_at').on('dp.change', function (e) {
-            $('#start_hour, #start_at').data("DateTimePicker").maxDate(e.date);
+        $('#end_hour').on('dp.change', function (e) {
+            $('#start_hour').data("DateTimePicker").maxDate(e.date);
         });
         $('#start_at').on('dp.change', function (e) {
             $('#end_at').data("DateTimePicker").minDate(e.date);

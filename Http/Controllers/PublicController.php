@@ -50,6 +50,28 @@ class PublicController extends BasePublicController
         return view('course::index', compact('courses'));
     }
 
+    public function show($slug)
+    {
+        $course = $this->course->findBySlug($slug);
+
+        /* Start Seo */
+        $this->seo()->setTitle($course->title)
+            ->setDescription($course->title)
+            ->meta()->setUrl($course->present()->url)
+            ->addMeta('robots', "index, follow")
+            ->addAlternates($this->getAlternateLanguages('course::routes.course.slug'));
+        /* End Seo */
+
+        Breadcrumbs::register('course.slug', function ($breadcrumbs) use ($course) {
+            $breadcrumbs->parent('course.index');
+            if(isset($course->category->slug))
+            $breadcrumbs->push($course->category->title, route('category.slug', [$course->category->slug]));
+            $breadcrumbs->push($course->title, route('course.slug', $course->slug));
+        });
+
+        return view('course::view', compact('course'));
+    }
+
     public function category($slug)
     {
         $category = $this->category->findBySlug($slug);

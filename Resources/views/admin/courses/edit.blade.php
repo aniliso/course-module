@@ -113,9 +113,9 @@
             </div>
             <div class="box">
                 <div class="box-body">
-                    {!! Form::normalSelect('category_id', trans('course::categories.title.categories'), $errors, $selectCategories, null) !!}
+                    {!! Form::normalSelect('category_id', trans('course::categories.title.categories'), $errors, $selectCategories, $course) !!}
 
-                    {!! Form::normalSelect('location_id', trans('course::locations.title.locations'), $errors, $selectLocations, null) !!}
+                    {!! Form::normalSelect('location_id', trans('course::locations.title.locations'), $errors, $selectLocations, $course) !!}
 
                     @mediaSingle('courseImage', $course, null, trans('course::courses.form.image'))
                 </div>
@@ -171,8 +171,8 @@
 //            d.setDate(d.getDate()+1);
                 $('#end_hour').data("DateTimePicker").minDate(e.date);
             });
-            $('#end_hour, #end_at').on('dp.change', function (e) {
-                $('#start_hour, #start_at').data("DateTimePicker").maxDate(e.date);
+            $('#end_hour').on('dp.change', function (e) {
+                $('#start_hour').data("DateTimePicker").maxDate(e.date);
             });
             $('#start_at').on('dp.change', function (e) {
                 $('#end_at').data("DateTimePicker").minDate(e.date);

@@ -16,7 +16,8 @@ return [
         'age'           => 'Yaş',
         'person'        => ':person kişi',
         'days'          => 'Eğitim Günleri',
-        'duration'      => 'Eğitim Süresi'
+        'duration'      => 'Eğitim Süresi',
+        'program'       => 'Kurs Programı',
     ],
     'button'           => [
         'create course' => 'Kurs Ekle',
