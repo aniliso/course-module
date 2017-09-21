@@ -8,8 +8,7 @@
     "order": 1,
     "providers": [
         "Modules\\Course\\Providers\\CourseServiceProvider",
-        "Modules\\Course\\Providers\\RouteServiceProvider",
-        "Modules\\Course\\Providers\\EventServiceProvider"
+        "Modules\\Course\\Providers\\RouteServiceProvider"
     ],
     "aliases": {},
     "files": [
