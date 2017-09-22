@@ -39,7 +39,9 @@ return [
         'capacity'    => 'Kapasite',
         'price'       => 'Toplam Ücret',
         'status'      => 'Durum',
-        'day'         => 'Eğitim Günleri'
+        'day'         => 'Eğitim Günleri',
+        'category_id' => 'Kategori',
+        'location_id' => 'Lokasyon'
     ],
     'messages'         => [
     ],

@@ -1,17 +1,17 @@
 <?php
 
 return [
-    'list resource' => 'List applications',
-    'create resource' => 'Create applications',
-    'edit resource' => 'Edit applications',
-    'destroy resource' => 'Destroy applications',
+    'list resource' => 'Başvuru Listele',
+    'create resource' => 'Başvuru Ekle',
+    'edit resource' => 'Başvuru Düzenle',
+    'destroy resource' => 'Başvuru Sil',
     'title' => [
         'applications' => 'Başvurular',
-        'create application' => 'Create a application',
-        'edit application' => 'Edit a application',
+        'create application' => 'Başvuru Ekle',
+        'edit application' => 'Başvuru Düzenle',
     ],
     'button' => [
-        'create application' => 'Create a application',
+        'create application' => 'Başvuru Ekle',
     ],
     'table' => [
     ],

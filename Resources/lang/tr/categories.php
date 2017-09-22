@@ -1,17 +1,17 @@
 <?php
 
 return [
-    'list resource'    => 'List categories',
-    'create resource'  => 'Create categories',
-    'edit resource'    => 'Edit categories',
-    'destroy resource' => 'Destroy categories',
+    'list resource'    => 'Kategori Listele',
+    'create resource'  => 'Kategori Ekle',
+    'edit resource'    => 'Kategori Düzenle',
+    'destroy resource' => 'Kategori Sil',
     'title'            => [
         'categories'      => 'Kategori',
-        'create category' => 'Create a category',
-        'edit category'   => 'Edit a category',
+        'create category' => 'Kategori Ekle',
+        'edit category'   => 'Kategori Düzenle',
     ],
     'button'           => [
-        'create category' => 'Create a category',
+        'create category' => 'Kategori Ekle',
     ],
     'table'            => [
         'title' => 'Kurs Kategorisi',

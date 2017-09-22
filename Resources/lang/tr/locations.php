@@ -1,18 +1,18 @@
 <?php
 
 return [
-    'list resource'    => 'List locations',
-    'create resource'  => 'Create locations',
-    'edit resource'    => 'Edit locations',
-    'destroy resource' => 'Destroy locations',
+    'list resource'    => 'Lokasyon Listele',
+    'create resource'  => 'Lokasyon Ekle',
+    'edit resource'    => 'Lokasyon Düzenle',
+    'destroy resource' => 'Lokasyon Sil',
     'title'            => [
         'locations'       => 'Lokasyon',
-        'create location' => 'Create a location',
-        'edit location'   => 'Edit a location',
+        'create location' => 'Lokasyon Ekle',
+        'edit location'   => 'Lokasyon Düzenle',
         'address'         => 'Adres'
     ],
     'button'           => [
-        'create location' => 'Create a location',
+        'create location' => 'Lokasyon Ekle',
     ],
     'table'            => [
     ],
