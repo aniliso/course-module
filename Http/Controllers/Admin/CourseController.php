@@ -2,7 +2,7 @@
 
 namespace Modules\Course\Http\Controllers\Admin;
 
-use Core\Models\Status;
+use Modules\Core\Models\Status;
 use Illuminate\Http\Request;
 use Illuminate\Http\Response;
 use Modules\Course\Entities\Course;

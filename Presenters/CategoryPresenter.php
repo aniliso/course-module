@@ -1,7 +1,7 @@
 <?php
 namespace Modules\Course\Presenters;
 
-use Core\Models\Status;
+use Modules\Core\Models\Status;
 use Modules\Core\Presenters\BasePresenter;
 
 class CategoryPresenter extends BasePresenter
