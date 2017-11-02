@@ -35,6 +35,11 @@ class CourseServiceProvider extends ServiceProvider
             $this->getSidebarClassForModule('Course', RegisterCourseSidebar::class)
         );
 
+        $this->app->extend('asgard.ModulesList', function($app) {
+            array_push($app, 'course');
+            return $app;
+        });
+
         view()->composer('course::admin.courses.*', CategoryComposer::class);
         view()->composer('course::admin.courses.*', LocationComposer::class);
 
