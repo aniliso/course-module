@@ -21,7 +21,7 @@
                     {{ Form::normalInput("name", trans("course::locations.form.name"), $errors) }}
 
                     <div class="form-group{{ $errors->has("address") ? ' has-error' : '' }}">
-                        {!! BSForm::textarea('address', null, ['class'=>'textarea']) !!}
+                        {!! Form::textarea('address', null, ['class'=>'form-control textarea']) !!}
                         {!! $errors->first("address", '<span class="help-block">:message</span>') !!}
                     </div>
 
